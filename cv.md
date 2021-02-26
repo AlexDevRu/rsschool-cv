@@ -44,3 +44,9 @@ There is no work experience, but there is a great desire to study and develop in
 		}
 		return true;
 	}
+## Experience
+
+## Education
+*Educational Institution*: Minsk State College of Electronics, 2016-2020  
+*Speciality*: IT Software  
+*Qualification*: Technical Programmer
