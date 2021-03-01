@@ -1,11 +1,16 @@
 @import 'base';
 
 .header {
-	background-color: #999;
+	background-color: #fff;
+	position: fixed;
+	width: 100%;
 	&__inner {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+	}
+	&__title {
+		font-size: 26px;
 	}
 	&__menu {
 		ul {
@@ -15,6 +20,12 @@
 		a {
 			padding: 5px 10px;
 			margin-right: 20px;
+			color: $text;
+			border: 1px solid transparent;
+			&:hover {
+				border-color: $accent;
+				color: $accent;
+			}
 		}
 	}
 	&__burger {

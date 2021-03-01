@@ -7,8 +7,10 @@
 body {
 	margin: 0;
 	font-size: 18px;
-	color: #00ff00;
-	overflow: hidden;
+	color: $text;
+	font-family: 'KoHo', sans-serif;
+	overflow-x: hidden;
+	background-color: $bg;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -33,6 +35,7 @@ ul, ol {
 a {
 	//color: $blue;
 	text-decoration: none;
+	transition: all .3s ease-out;
 	&:hover {
 		//color: $blue;
 	}
@@ -50,7 +53,6 @@ input, textarea {
 	//background-color: $blue;
 	border-radius: 40px;
 	transition: all 0.3s ease-out;
-
 	&:hover {
 		color: #fff;
 		//background-color: $darkblue;
@@ -67,7 +69,7 @@ input, textarea {
 .container {
 	padding: 0 20px;
 	margin: 0 auto;
-	max-width: 1210px;
+	max-width: 1240px;
 }
 
 
