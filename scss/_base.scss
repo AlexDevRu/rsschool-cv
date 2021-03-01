@@ -73,6 +73,14 @@ input, textarea {
 	max-width: 1240px;
 }
 
+pre {
+	margin: 0;
+}
+mark {
+	background-color: transparent;
+	color: $accent;
+	font-weight: 600;
+}
 
 /*.wrapper {
 	display: flex;
