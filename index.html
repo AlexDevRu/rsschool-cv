@@ -18,7 +18,7 @@
 							<li><a href="#about">About me</a></li>
 							<li><a href="#skills">Skills</a></li>
 							<li><a href="#coding">Coding</a></li>
-							<li><a href="#experience">Experience</a></li>
+							<li><a href="#projects">Projects</a></li>
 							<li><a href="#education">Education</a></li>
 						</ul>
 					</nav>
@@ -168,7 +168,72 @@ function deepEqual(obj1, obj2) {
 					</div>
 				</div>
 			</section>
-			<section class="education">
+			<section class="projects" id="projects">
+				<div class="container">
+					<div class="projects__inner">
+						<h2 class="title">My projects</h2>
+						<div class="projects-items">
+							<div class="projects-item">
+								<img src="img/dest/projects/23Degree.jpg" alt="23Degree">
+								<h3>23Degree</h3>
+								<ul class="hidden-info">
+									<li>
+										<span class="accent">Language: </span>HTML&CSS&JavaScript
+									</li>
+									<li>
+										<span class="accent">Description: </span>Landing
+									</li>
+									<li>
+										<span class="accent">Source: </span>
+										<a href="https://github.com/AlexDevRu/23Degree" target="_blank">https://github.com/AlexDevRu/23Degree</a>
+									</li>
+									<li>
+										<span class="accent">Deploy: </span>
+										<a href="https://alexdevru.github.io/23Degree/" target="_blank">https://alexdevru.github.io/23Degree/</a>
+									</li>
+								</ul>
+							</div>
+							<div class="projects-item">
+								<img src="img/dest/projects/Aviasales.jpg" alt="Aviasales">
+								<h3>Aviasales</h3>
+								<ul class="hidden-info">
+									<li>
+										<span class="accent">Language: </span>JavaScript (React & Redux)
+									</li>
+									<li>
+										<span class="accent">Description: </span>Single page application. Interacts with the server using REST API. Sorting and filtering implemented.
+									</li>
+									<li>
+										<span class="accent">Source: </span>
+										<a href="https://github.com/AlexDevRu/Aviasales" target="_blank">https://github.com/AlexDevRu/Aviasales</a>
+									</li>
+									<li>
+										<span class="accent">Deploy: </span>
+										<a href="https://alexdevru.github.io/Aviasales" target="_blank">https://alexdevru.github.io/Aviasales</a>
+									</li>
+								</ul>
+							</div>
+							<div class="projects-item">
+								<img src="img/dest//projects/collector-machines.jpg" alt="collector-machines">
+								<h3>E-learning tool "Collector machines"</h3>
+								<ul class="hidden-info">
+									<li>
+										<span class="accent">Language: </span>C#, WPF
+									</li>
+									<li>
+										<span class="accent">Description: </span>The project is an interactive e-learning tool with hierarchically organized theoretical sections, tests with different types of questions, practical tasks, a glossary and a video library. Diploma Project. Used in the educational process by students of the relevant specialty.
+									</li>
+									<li>
+										<span class="accent">Source: </span>
+										<a href="https://github.com/AlexDevRu/CollectorMachines" target="_blank">https://github.com/AlexDevRu/CollectorMachines</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="education" id="education">
 				<div class="container">
 					<div class="education__inner">
 						<h2 class="title">Education</h2>
@@ -225,6 +290,14 @@ function deepEqual(obj1, obj2) {
 				</div>
 			</div>
 		</footer>
+
+		<div id="popup" class="popup">
+		  <div class="popup-content">
+		    <span class="close">&times;</span>
+		    <div class="popup-image"></div>
+		    <div class="popup-text"></div>
+		  </div>
+		</div>
 		<script src="js/app.min.js"></script>
 	</body>
 </html>

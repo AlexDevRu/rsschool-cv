@@ -14,6 +14,13 @@ body {
 	line-height: 1.5;
 }
 
+body.lock {
+	overflow: hidden;
+	.container {
+		padding-right: 29px;
+	}
+}
+
 h1, h2, h3, h4, h5, h6 {
 	margin: 0;
 }
@@ -46,7 +53,7 @@ a {
 pre {
 	margin: 0;
 }
-mark {
+mark, span.accent {
 	background-color: transparent;
 	color: $accent;
 	font-weight: 600;
