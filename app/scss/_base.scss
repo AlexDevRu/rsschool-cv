@@ -16,9 +16,9 @@ body {
 
 body.lock {
 	overflow: hidden;
-	.container {
-		padding-right: 29px;
-	}
+	// .container {
+	// 	padding-right: 29px;
+	// }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -28,6 +28,10 @@ h1, h2, h3, h4, h5, h6 {
 ul, ol {
 	list-style: none;
 	padding: 0;
+}
+
+img {
+	max-width: 100%;
 }
 
 a {

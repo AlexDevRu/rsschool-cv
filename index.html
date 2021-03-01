@@ -20,6 +20,7 @@
 							<li><a href="#education">Education</a></li>
 						</ul>
 					</nav>
+					<div class="header__burger"><span></span></div>
 				</div>
 			</div>
 		</header>
@@ -80,7 +81,7 @@
 								</div>
 							</li>
 							<li>
-								<span>HTML, CSS, JavaScript, jQuery</span>
+								<span>HTML, CSS, JavaScript</span>
 								<span>80%</span>
 								<div class="progress">
 									<div class="progress-bar" style="width: 80%"></div>
@@ -147,28 +148,28 @@
 						<code>
 							<pre>
 function deepEqual(obj1, obj2) {
-	let prop1 = Object.keys(obj1);
-	let prop2 = Object.keys(obj2);
-	for(let i = 0; i &lt; prop1.length || i &lt; prop2.length; i++) {
-		let p1 = prop1[i];
-		let p2 = prop2[i];
+  let prop1 = Object.keys(obj1);
+  let prop2 = Object.keys(obj2);
+  for(let i = 0; i &lt; prop1.length || i &lt; prop2.length; i++) {
+    let p1 = prop1[i];
+    let p2 = prop2[i];
 
-		let is_obj1 = typeof(obj1[p1]) === "object";
-		let is_obj2 = typeof(obj2[p2]) === "object";
+    let is_obj1 = typeof(obj1[p1]) === "object";
+    let is_obj2 = typeof(obj2[p2]) === "object";
 		
-		let value1 = obj1[p1];
-		let value2 = obj2[p2];
+    let value1 = obj1[p1];
+    let value2 = obj2[p2];
 		
-		if(value1 !== value2 && !is_obj1 && !is_obj2 || 
-			(value1 === null && is_obj2 || value2 === null && is_obj1))
-			return false;
+    if(value1 !== value2 && !is_obj1 && !is_obj2 || 
+      (value1 === null && is_obj2 || value2 === null && is_obj1))
+      return false;
 
-		if(value1 !== null && value2 !== null && is_obj1 && is_obj2)
-			if(!deepEqual(obj1[p1], obj2[p2]))
-				return false;	
-	}
-	return true;
-}</pre>					
+    if(value1 !== null && value2 !== null && is_obj1 && is_obj2)
+      if(!deepEqual(obj1[p1], obj2[p2]))
+        return false;
+  }
+  return true;
+}</pre>		
 						</code>
 					</div>
 				</div>
@@ -299,8 +300,8 @@ function deepEqual(obj1, obj2) {
 		<div id="popup" class="popup">
 		  <div class="popup-content">
 		  	<i class="icon-close close"></i>
-		    <div class="popup-image"></div>
-		    <div class="popup-text"></div>
+		  <div class="popup-image"></div>
+		  <div class="popup-text"></div>
 		  </div>
 		</div>
 		<script src="js/app.min.js"></script>
