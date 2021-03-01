@@ -1,4 +1,26 @@
 @font-face {
+    font-family: "KoHo";
+    src: url("../fonts/KoHo-Regular.eot"); /* IE9 */
+    src: url("../fonts/KoHo-Regular.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("../fonts/KoHo-Regular.woff") format("woff"), /* chrome, firefox */
+    url("../fonts/KoHo-Regular.ttf") format("truetype"), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+    url("../fonts/KoHo-Regular.svg#KoHo") format("svg"); /* iOS 4.1- */
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "KoHo SemiBold";
+    src: url("../fonts/KoHo-SemiBold.eot"); /* IE9 */
+    src: url("../fonts/KoHo-SemiBold.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("../fonts/KoHo-SemiBold.woff") format("woff"), /* chrome, firefox */
+    url("../fonts/KoHo-SemiBold.ttf") format("truetype"), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+    url("../fonts/KoHo-SemiBold.svg#KoHo SemiBold") format("svg"); /* iOS 4.1- */
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
   font-family: 'icomoon';
   src:  url('../fonts/icomoon.eot?j3ny9');
   src:  url('../fonts/icomoon.eot?j3ny9#iefix') format('embedded-opentype'),
