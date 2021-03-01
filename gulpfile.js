@@ -25,8 +25,8 @@ let paths = {
 	},
 
 	images: {
-		src:  baseDir + '/images/src/**/*',
-		dest: baseDir + '/images/dest',
+		src:  baseDir + '/img/src/**/*',
+		dest: baseDir + '/img/dest',
 	},
 
 	cssOutputName: 'app.min.css',

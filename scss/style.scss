@@ -19,13 +19,16 @@
 		}
 		a {
 			padding: 5px 10px;
-			margin-right: 20px;
 			color: $text;
 			border: 1px solid transparent;
 			&:hover {
 				border-color: $accent;
 				color: $accent;
+				text-decoration: none;
 			}
+		}
+		li+li {
+			margin-left: 20px;
 		}
 	}
 	&__burger {
@@ -68,6 +71,21 @@
 		&.active span{
 			transform: scale(0);
 		}
+	}
+}
+
+.contacts {
+	padding: 120px 50px;
+	min-height: 100vh;
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__list li {
+		margin-top: 20px;
+	}
+	.photo {
+		max-width: 300px;
 	}
 }
 

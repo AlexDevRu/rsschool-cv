@@ -33,11 +33,11 @@ ul, ol {
 }
 
 a {
-	//color: $blue;
+	color: $accent;
 	text-decoration: none;
 	transition: all .3s ease-out;
 	&:hover {
-		//color: $blue;
+		text-decoration: underline;
 	}
 }
 
@@ -62,7 +62,7 @@ input, textarea {
 
 .title {
 	font-size: 36px;
-	text-align: center;
+	//text-align: center;
 	color: #363636;
 }
 
