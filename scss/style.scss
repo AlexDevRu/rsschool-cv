@@ -166,6 +166,32 @@
 	}
 }
 
+.footer {
+	padding: 50px 0;
+	background-color: #999;
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+	.logo {
+		max-width: 150px;
+	}
+	.year {
+		flex-basis: 100%;
+		color: #fff;
+		margin-top: 20px;
+	}
+	.socials {
+		li+li {
+			margin-top: 15px;
+		}
+	}
+	a {
+		color: #fff;
+	}
+}
+
 .progress {
 	background-color: $bg-dark;
 	border-radius: 3px;
