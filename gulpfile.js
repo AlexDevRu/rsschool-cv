@@ -91,22 +91,22 @@ function fonts() {
     .pipe(dest(baseDir + '/fonts'));
 }
 
-gulp.task('export', function(){
-  let buildHtml = gulp.src('app/**/*.html')
-    .pipe(gulp.dest('dist'));
+function assembly() {
+  let buildHtml = src('app/**/*.html')
+    .pipe(dest('dist'));
 
-  let BuildCss = gulp.src('app/css/**/*.min.css')
-    .pipe(gulp.dest('dist/css'));
+  let BuildCss = src('app/css/**/*.min.css')
+    .pipe(dest('dist/css'));
 
-  let BuildJs = gulp.src('app/js/**/*.min.js')
-    .pipe(gulp.dest('dist/js'));
+  let BuildJs = src('app/js/**/*.min.js')
+    .pipe(dest('dist/js'));
     
-  let BuildFonts = gulp.src('app/fonts/**/*.*')
-    .pipe(gulp.dest('dist/fonts'));
+  let BuildFonts = src('app/fonts/**/*.*')
+    .pipe(dest('dist/fonts'));
 
-  let BuildImg = gulp.src('app/img/dest/**/*.*', {base: 'app/img/dest/'})
-    .pipe(gulp.dest('dist/img'));   
-});
+  let BuildImg = src('app/img/dest/**/*.*', {base: 'app/img/dest/'})
+    .pipe(dest('dist/img'));   
+}
 
 function startwatch() {
 	watch(baseDir  + '/' + preprocessor + '/**/*', {usePolling: true}, styles);
@@ -122,4 +122,5 @@ exports.scripts     = scripts;
 exports.images      = images;
 exports.cleanimg    = cleanimg;
 exports.fonts       = fonts;
+exports.assembly    = assembly;
 exports.default     = parallel(images, styles, scripts, browsersync, startwatch);

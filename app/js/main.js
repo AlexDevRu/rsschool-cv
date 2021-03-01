@@ -1,7 +1,11 @@
 var links  = document.querySelectorAll('.header__menu a');
 Array.from(links).forEach(function(link) {
 	link.onclick = function(e) {
-		window.scrollBy(0, -100);
+		var anchor = '#' + link.href.split('#')[1];
+		location.hash = anchor;
+		document.querySelector(anchor).scrollIntoView();
+		window.scrollBy(0, -62.4);
+		e.preventDefault();
 	};
 });
 
