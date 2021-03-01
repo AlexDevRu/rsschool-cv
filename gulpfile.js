@@ -3,7 +3,7 @@
 let preprocessor = 'scss', // Preprocessor (sass, scss, less, styl)
     fileswatch   = 'html,htm,txt,json,md,woff2', // List of files extensions for watching & hard reload (comma separated)
     imageswatch  = 'jpg,jpeg,png,webp,svg', // List of images extensions for watching & compression (comma separated)
-    baseDir      = '.', // Base directory path without «/» at the end
+    baseDir      = 'app', // Base directory path without «/» at the end
     online       = true; // If «false» - Browsersync will work offline without internet connection
 
 let paths = {
@@ -90,6 +90,23 @@ function fonts() {
     .pipe(fontmin())
     .pipe(dest(baseDir + '/fonts'));
 }
+
+gulp.task('export', function(){
+  let buildHtml = gulp.src('app/**/*.html')
+    .pipe(gulp.dest('dist'));
+
+  let BuildCss = gulp.src('app/css/**/*.min.css')
+    .pipe(gulp.dest('dist/css'));
+
+  let BuildJs = gulp.src('app/js/**/*.min.js')
+    .pipe(gulp.dest('dist/js'));
+    
+  let BuildFonts = gulp.src('app/fonts/**/*.*')
+    .pipe(gulp.dest('dist/fonts'));
+
+  let BuildImg = gulp.src('app/img/dest/**/*.*', {base: 'app/img/dest/'})
+    .pipe(gulp.dest('dist/img'));   
+});
 
 function startwatch() {
 	watch(baseDir  + '/' + preprocessor + '/**/*', {usePolling: true}, styles);
