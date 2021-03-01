@@ -1,0 +1,63 @@
+@import 'base';
+
+.header {
+	background-color: #999;
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__menu {
+		ul {
+			display: flex;
+			justify-content: space-between;
+		}
+		a {
+			padding: 5px 10px;
+			margin-right: 20px;
+		}
+	}
+	&__burger {
+		cursor: pointer;
+		width: 100%;
+		height: 22px;
+		position: relative;
+		& span, 
+		&:before, 
+		&:after {
+			position: absolute;	
+			left: 0;
+			height: 3px;
+			width: 100%;
+			background-color: #fff;
+			transition: all 0.3s ease-out;
+		}
+		& span {
+			top: 9px;
+		}
+		&:before {
+			content: '';
+			top: 2px;
+		}
+		&:after {
+			content: '';
+			bottom: 2px;
+		}
+
+		&.active:before {
+			transform: rotate(45deg);
+			top: 15px;
+		}
+
+		&.active:after {
+			transform: rotate(-45deg);
+			bottom: 5px;
+		}
+
+		&.active span{
+			transform: scale(0);
+		}
+	}
+}
+
+@import 'media';
