@@ -93,19 +93,19 @@ function fonts() {
 
 function assembly() {
   let buildHtml = src('app/**/*.html')
-    .pipe(dest('dist'));
+    .pipe(dest('.'));
 
   let BuildCss = src('app/css/**/*.min.css')
-    .pipe(dest('dist/css'));
+    .pipe(dest('./css'));
 
   let BuildJs = src('app/js/**/*.min.js')
-    .pipe(dest('dist/js'));
+    .pipe(dest('./js'));
     
   let BuildFonts = src('app/fonts/**/*.*')
-    .pipe(dest('dist/fonts'));
+    .pipe(dest('./fonts'));
 
   let BuildImg = src('app/img/dest/**/*.*', {base: 'app/img/dest/'})
-    .pipe(dest('dist/img'));   
+    .pipe(dest('./img'));   
 }
 
 function startwatch() {
