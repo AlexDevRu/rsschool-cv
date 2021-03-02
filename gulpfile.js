@@ -105,7 +105,7 @@ function assembly() {
     .pipe(dest('./fonts'));
 
   let BuildImg = src('app/img/dest/**/*.*', {base: 'app/img/dest/'})
-    .pipe(dest('./img'));   
+    .pipe(dest('./img/dest'));
 }
 
 function startwatch() {
