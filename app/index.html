@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>HTML, CSS & Git Basics</title>
+		<link rel="stylesheet" href="css/app.min.css">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=KoHo:wght@400;600&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<header class="header">
+			<div class="container">
+				<div class="header__inner">
+					<div class="header__title">CV</div>
+					<nav class="header__menu">
+						<ul>
+							<li><a href="#about">About me</a></li>
+							<li><a href="#skills">Skills</a></li>
+							<li><a href="#coding">Coding</a></li>
+							<li><a href="#projects">Projects</a></li>
+							<li><a href="#education">Education</a></li>
+						</ul>
+					</nav>
+					<div class="header__burger"><span></span></div>
+				</div>
+			</div>
+		</header>
+		<main>
+			<section class="contacts">
+				<div class="container">
+					<div class="contacts__inner">
+						<div class="contacts__info">
+							<h1 class="name title">Alexander Kulakov</h1>
+							<ul class="contacts__list">
+								<li>
+									<a href="mailto:alexkulakov01@gmail.com">
+										<i class="icon-envelope"></i>
+										alexkulakov01@gmail.com
+									</a>
+								</li>
+								<li>
+									<a href="tel:375333746282">
+										<i class="icon-phone"></i>
+										+375 (33) 374-62-82
+									</a>
+								</li>
+								<li>
+									<i class="icon-location"></i>
+									Minsk, Belarus
+								</li>
+							</ul>
+						</div>
+						<img class="photo" src="img/dest/photo.jpg" alt="photo">
+					</div>
+				</div>
+			</section>
+			<section class="about" id="about">
+				<div class="container">
+					<div class="about__inner">
+						<h2 class="title">About me</h2>
+						<p class="about__text">I have special secondary education. Now I am studying in BSUIR. I am responsible, executive, diligent, stress-resistant. I easily learn new things. There is no work experience, but there is a great desire to study and develop in the IT field.</p>
+					</div>
+				</div>
+			</section>
+			<section class="skills" id="skills">
+				<div class="container">
+					<div class="skills__inner">
+						<h2 class="title">Skills</h2>
+						<ul class="skills__list">
+							<li>
+								<span>C#, .NET, WPF, WinForms</span>
+								<span>50%</span>
+								<div class="progress">
+									<div class="progress-bar" style="width: 50%"></div>
+								</div>
+							</li>
+							<li>
+								<span>Python 3, Django</span>
+								<span>50%</span>
+								<div class="progress">
+									<div class="progress-bar" style="width: 50%"></div>
+								</div>
+							</li>
+							<li>
+								<span>HTML, CSS, JavaScript</span>
+								<span>80%</span>
+								<div class="progress">
+									<div class="progress-bar" style="width: 80%"></div>
+								</div>
+							</li>
+							<li>
+								<span>React.js</span>
+								<span>40%</span>
+								<div class="progress">
+									<div class="progress-bar" style="width: 40%"></div>
+								</div>
+							</li>
+							<li>
+								<span>REST API</span>
+								<span>80%</span>
+								<div class="progress">
+									<div class="progress-bar" style="width: 80%"></div>
+								</div>
+							</li>
+							<li>
+								<span>SQL</span>
+								<span>80%</span>
+								<div class="progress">
+									<div class="progress-bar" style="width: 80%"></div>
+								</div>
+							</li>
+							<li>
+								<span>Object Oriented Programming</span>
+								<span>90%</span>
+								<div class="progress">
+									<div class="progress-bar" style="width: 90%"></div>
+								</div>
+							</li>
+							<li>
+								<span>SOLID</span>
+								<span>50%</span>
+								<div class="progress">
+									<div class="progress-bar" style="width: 50%"></div>
+								</div>
+							</li>
+							<li>
+								<span>Git</span>
+								<span>70%</span>
+								<div class="progress">
+									<div class="progress-bar" style="width: 70%"></div>
+								</div>
+							</li>
+							<li>
+								<span>English</span>
+								<span>A2</span>
+								<div class="progress">
+									<div class="progress-bar" style="width: 33.333333%"></div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section class="coding" id="coding">
+				<div class="container">
+					<div class="coding__inner">
+						<h2 class="title">Coding</h2>
+						<p class="coding__text">This function compares two objects and returns <mark>true</mark> if the objects have the same properties.</p>
+							<pre><code>
+function deepEqual(obj1, obj2) {
+  let prop1 = Object.keys(obj1);
+  let prop2 = Object.keys(obj2);
+  for(let i = 0; i &lt; prop1.length || i &lt; prop2.length; i++) {
+    let p1 = prop1[i];
+    let p2 = prop2[i];
+
+    let is_obj1 = typeof(obj1[p1]) === "object";
+    let is_obj2 = typeof(obj2[p2]) === "object";
+		
+    let value1 = obj1[p1];
+    let value2 = obj2[p2];
+		
+    if(value1 !== value2 && !is_obj1 && !is_obj2 || 
+      (value1 === null && is_obj2 || value2 === null && is_obj1))
+      return false;
+
+    if(value1 !== null && value2 !== null && is_obj1 && is_obj2)
+      if(!deepEqual(obj1[p1], obj2[p2]))
+        return false;
+  }
+  return true;
+}</code></pre>
+					</div>
+				</div>
+			</section>
+			<section class="projects" id="projects">
+				<div class="container">
+					<div class="projects__inner">
+						<h2 class="title">My projects</h2>
+						<div class="projects-items">
+							<div class="projects-item">
+								<img src="img/dest/projects/23Degree.jpg" alt="23Degree">
+								<h3>23Degree</h3>
+								<ul class="hidden-info">
+									<li>
+										<span class="accent">Language: </span>HTML&CSS&JavaScript
+									</li>
+									<li>
+										<span class="accent">Description: </span>Landing
+									</li>
+									<li>
+										<span class="accent">Source: </span>
+										<a href="https://github.com/AlexDevRu/23Degree" target="_blank">https://github.com/AlexDevRu/23Degree</a>
+									</li>
+									<li>
+										<span class="accent">Deploy: </span>
+										<a href="https://alexdevru.github.io/23Degree/" target="_blank">https://alexdevru.github.io/23Degree/</a>
+									</li>
+								</ul>
+							</div>
+							<div class="projects-item">
+								<img src="img/dest/projects/Aviasales.jpg" alt="Aviasales">
+								<h3>Aviasales</h3>
+								<ul class="hidden-info">
+									<li>
+										<span class="accent">Language: </span>JavaScript (React & Redux)
+									</li>
+									<li>
+										<span class="accent">Description: </span>Single page application. Interacts with the server using REST API. Sorting and filtering implemented.
+									</li>
+									<li>
+										<span class="accent">Source: </span>
+										<a href="https://github.com/AlexDevRu/Aviasales" target="_blank">https://github.com/AlexDevRu/Aviasales</a>
+									</li>
+									<li>
+										<span class="accent">Deploy: </span>
+										<a href="https://alexdevru.github.io/Aviasales" target="_blank">https://alexdevru.github.io/Aviasales</a>
+									</li>
+								</ul>
+							</div>
+							<div class="projects-item">
+								<img src="img/dest//projects/collector-machines.jpg" alt="collector-machines">
+								<h3>E-learning tool "Collector machines"</h3>
+								<ul class="hidden-info">
+									<li>
+										<span class="accent">Language: </span>C#, WPF
+									</li>
+									<li>
+										<span class="accent">Description: </span>The project is an interactive e-learning tool with hierarchically organized theoretical sections, tests with different types of questions, practical tasks, a glossary and a video library. Diploma Project. Used in the educational process by students of the relevant specialty.
+									</li>
+									<li>
+										<span class="accent">Source: </span>
+										<a href="https://github.com/AlexDevRu/CollectorMachines" target="_blank">https://github.com/AlexDevRu/CollectorMachines</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="education" id="education">
+				<div class="container">
+					<div class="education__inner">
+						<h2 class="title">Education</h2>
+						<div class="timeline">
+							<div class="timeline-item">
+								<span class="timeline-item__year">2016</span>
+								<div class="timeline-item__text">
+									<p>
+										<span class="timeline-item__title">Educational Institution:</span>
+										Minsk State College of Electronics
+									</p>
+									<p>
+										<span class="timeline-item__title">Speciality:</span>
+										IT Software
+									</p>
+									<p>
+										<span class="timeline-item__title">Qualification:</span>
+										Technical Programmer
+									</p>
+								</div>
+							</div>
+							<div class="timeline-item">
+								<span class="timeline-item__year">2020</span>
+								<div class="timeline-item__text">
+									<p>
+										<span class="timeline-item__title">Educational Institution:</span>
+										Belarusian State University of Informatics and Radioelectronics
+									</p>
+									<p>
+										<span class="timeline-item__title">Speciality:</span>
+										IT Software
+									</p>
+									<p>
+										<span class="timeline-item__title">Qualification:</span>
+										Software Engineer
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__inner">
+					<a href="https://rs.school/js/">
+						<img class="logo" src="img/dest/rs_school_js.svg" alt="logo">
+					</a>
+					<ul class="socials">
+						<li><a href="https://github.com/AlexDevRu"><i class="icon-github"></i>Github</a></li>
+					</ul>
+					<span class="year">2021</span>
+				</div>
+			</div>
+		</footer>
+
+		<div id="popup" class="popup">
+		  <div class="popup-content">
+		  	<i class="icon-close close"></i>
+		  <div class="popup-image"></div>
+		  <div class="popup-text"></div>
+		  </div>
+		</div>
+		<script src="js/app.min.js"></script>
+	</body>
+</html>

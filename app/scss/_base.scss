@@ -1,0 +1,64 @@
+@import "vars";
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-size: 18px;
+	color: $text;
+	font-family: 'KoHo', sans-serif;
+	overflow-x: hidden;
+	background-color: $bg;
+	line-height: 1.5;
+}
+
+body.lock {
+	overflow: hidden;
+	// .container {
+	// 	padding-right: 29px;
+	// }
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+}
+
+ul, ol {
+	list-style: none;
+	padding: 0;
+}
+
+img {
+	max-width: 100%;
+}
+
+a {
+	color: $accent;
+	text-decoration: none;
+	transition: all .3s ease-out;
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+.title {
+	font-size: 36px;
+	color: #363636;
+}
+
+.container {
+	padding: 0 20px;
+	margin: 0 auto;
+	max-width: 1240px;
+}
+
+pre {
+	margin: 0;
+}
+mark, span.accent {
+	background-color: transparent;
+	color: $accent;
+	font-weight: 600;
+}
